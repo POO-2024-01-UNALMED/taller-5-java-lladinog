@@ -22,20 +22,16 @@ public class Zoologico {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getUbicacion() {
         return ubicacion;
     }
 
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
+    public List<Zona> getZonas() {
+        return zonas;
     }
 
-    public void agregarZona(Zona zona) {
-        zonas.add(zona);
+    public void agregarZonas(Zona zona) {
+        this.zonas.add(zona);
     }
 
     public int cantidadTotalAnimales() {

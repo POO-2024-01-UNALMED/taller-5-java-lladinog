@@ -11,14 +11,10 @@ public class Ave extends Animal {
         super();
     }
 
-    public Ave(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
-        super(nombre, edad, habitat, genero, zona);
+    public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas, Zona zona) {
+        super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
-        if (nombre.equalsIgnoreCase("aguila")) {
-            aguilas++;
-        } else if (nombre.equalsIgnoreCase("halcon")) {
-            halcones++;
-        }
+        this.zona = zona;
     }
 
     public static int cantidadAves() {
@@ -41,12 +37,14 @@ public class Ave extends Animal {
         this.colorPlumas = colorPlumas;
     }
 
-    public static Ave crearAguila(String nombre, int edad, String genero, Zona zona) {
-        return new Ave(nombre, edad, "montanas", genero, zona, "blanco y amarillo");
+    public static Ave crearHalcon(String nombre, int edad, String genero, Zona zona) {
+        Ave.halcones++;
+        return new Ave(nombre, edad, "montañas", genero, "cafe glorioso", zona);
     }
 
-    public static Ave crearHalcon(String nombre, int edad, String genero, Zona zona) {
-        return new Ave(nombre, edad, "acantilados", genero, zona, "cafe glorioso");
+    public static Ave crearAguila(String nombre, int edad, String genero, Zona zona) {
+        Ave.aguilas++;
+        return new Ave(nombre, edad, "montañas", genero, "blanco y amarillo", zona);
     }
 
     @Override

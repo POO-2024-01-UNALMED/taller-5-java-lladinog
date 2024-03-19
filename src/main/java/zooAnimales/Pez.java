@@ -12,15 +12,11 @@ public class Pez extends Animal {
         super();
     }
 
-    public Pez(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int cantidadAletas) {
-        super(nombre, edad, habitat, genero, zona);
+    public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas, Zona zona) {
+        super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
-        if (nombre.equalsIgnoreCase("salmon")) {
-            salmones++;
-        } else if (nombre.equalsIgnoreCase("bacalao")) {
-            bacalaos++;
-        }
+        this.zona = zona;
     }
 
     public static int cantidadPeces() {
@@ -52,11 +48,13 @@ public class Pez extends Animal {
     }
 
     public static Pez crearSalmon(String nombre, int edad, String genero, Zona zona) {
-        return new Pez(nombre, edad, "oceano", genero, zona, "rojo", 6);
+        Pez.salmones++;
+        return new Pez(nombre, edad, "oceano", genero, "rojo", 6, zona);
     }
 
     public static Pez crearBacalao(String nombre, int edad, String genero, Zona zona) {
-        return new Pez(nombre, edad, "oceano", genero, zona, "gris", 6);
+        Pez.bacalaos++;
+        return new Pez(nombre, edad, "oceano", genero, "gris", 6, zona);
     }
 
     @Override

@@ -12,15 +12,11 @@ public class Anfibio extends Animal {
         super();
     }
 
-    public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona, String colorPiel, boolean venenoso) {
-        super(nombre, edad, habitat, genero, zona);
+    public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso, Zona zona) {
+        super(nombre, edad, habitat, genero);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
-        if (nombre.equalsIgnoreCase("rana")) {
-            ranas++;
-        } else if (nombre.equalsIgnoreCase("salamandra")) {
-            salamandras++;
-        }
+        this.zona = zona;
     }
 
     public static int cantidadAnfibios() {
@@ -52,13 +48,14 @@ public class Anfibio extends Animal {
     }
 
     public static Anfibio crearRana(String nombre, int edad, String genero, Zona zona) {
-        return new Anfibio(nombre, edad, "selva", genero, zona, "verde", true);
+        Anfibio.ranas++;
+        return new Anfibio(nombre, edad, "selva", genero, "rojo", true, zona);
     }
 
     public static Anfibio crearSalamandra(String nombre, int edad, String genero, Zona zona) {
-        return new Anfibio(nombre, edad, "selva", genero, zona, "negro y amarillo", false);
+        Anfibio.salamandras++;
+        return new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false, zona);
     }
-
     @Override
     public String movimiento() {
         return "saltar";

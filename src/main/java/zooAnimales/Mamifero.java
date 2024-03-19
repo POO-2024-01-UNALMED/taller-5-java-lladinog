@@ -52,13 +52,14 @@ public class Mamifero extends Animal {
     }
 
     public static Mamifero crearCaballo(String nombre, int edad, String genero, Zona zona) {
-        return new Mamifero(nombre, edad, "pradera", genero, zona, true, 4);
+        Mamifero.caballos++;
+        return new Mamifero(nombre, edad, "pradera", genero, true, 4, zona);
     }
 
     public static Mamifero crearLeon(String nombre, int edad, String genero, Zona zona) {
-        return new Mamifero(nombre, edad, "selva", genero, zona, true, 4);
+        Mamifero.leones++;
+        return new Mamifero(nombre, edad, "selva", genero, true, 4, zona);
     }
-
     @Override
     public String movimiento() {
         return "desplazarse";
