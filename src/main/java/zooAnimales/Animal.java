@@ -1,80 +1,55 @@
 package zooAnimales;
-
 import gestion.Zona;
-
 public class Animal {
-    private static int totalAnimales = 0;
-    protected String nombre;
-    protected int edad;
-    protected String habitat;
-    protected String genero;
-    protected Zona zona;
+	private static int totalAnimales = 0;
+    private String nombre;
+    private int edad;
+    private String habitat;
+    private String genero;
+    private static Zona zona;
 
     public Animal() {
-        totalAnimales++;
     }
 
-    public Animal(String nombre, int edad, String habitat, String genero) {
+    public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        Animal.zona = zona;
+        totalAnimales++;
     }
-
     public static int getTotalAnimales() {
         return totalAnimales;
+    }
+    public static Zona getZona() {
+        return zona;
     }
 
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public int getEdad() {
         return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
     }
 
     public String getHabitat() {
         return habitat;
     }
 
-    public void setHabitat(String habitat) {
-        this.habitat = habitat;
-    }
-
     public String getGenero() {
         return genero;
     }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
-    }
-
-    public Zona getZona() {
-        return zona;
-    }
-
-    public void setZona(Zona zona) {
-        this.zona = zona;
-    }
-
     public String movimiento() {
         return "desplazarse";
     }
-
-    public static String totalPorTipo() {
-        return "Mamiferos: " + Mamifero.getCaballos() + "\n" +
-               "Aves: " + (Ave.getAguilas() + Ave.getHalcones()) + "\n" +
-               "Reptiles: " + (Reptil.getIguanas() + Reptil.getSerpientes()) + "\n" +
-               "Peces: " + (Pez.getSalmones() + Pez.getBacalaos()) + "\n" +
-               "Anfibios: " + (Anfibio.getRanas() + Anfibio.getSalamandras());
+    public String totalPorTipo() {
+        return "Mamiferos: #" + Mamifero.cantidadMamiferos() +
+                "\nAves: #" + Ave.cantidadAves() +
+                "\nReptiles: #" + Reptil.cantidadReptiles() +
+                "\nPeces: #" + Pez.cantidadPeces() +
+                "\nAnfibios: #" + Anfibio.cantidadAnfibios();
     }
 
     @Override
