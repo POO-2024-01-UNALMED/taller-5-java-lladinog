@@ -2,7 +2,7 @@ package zooAnimales;
 
 public class Reptil extends Animal {
 
-	private static int totalReptiles = 0;
+	private static int totalReptiles = 1;
     private String colorEscamas;
     private int largoCola;
     public static int iguanas;

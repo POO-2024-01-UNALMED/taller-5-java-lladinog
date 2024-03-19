@@ -1,7 +1,7 @@
 package zooAnimales;
 
 public class Mamifero extends Animal {;
-	private static int totalMamiferos = 0;
+	private static int totalMamiferos = 1;
     private boolean pelaje;
     private int patas;
     public static int caballos;

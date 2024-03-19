@@ -1,7 +1,7 @@
 package zooAnimales;
 
 public class Anfibio extends Animal {
-	private static int totalAnfibios = 0;
+	private static int totalAnfibios = 1;
     private String colorPiel;
     private boolean venenoso;
     public static int ranas;

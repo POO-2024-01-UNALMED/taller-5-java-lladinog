@@ -2,7 +2,7 @@ package zooAnimales;
 
 
 public class Pez extends Animal {
-	private static int totalPeces = 0;
+	private static int totalPeces = 1;
 	private String colorEscamas;
     private int cantidadAletas;
     public static int salmones;

@@ -1,7 +1,7 @@
 package zooAnimales;
 
 public class Ave extends Animal {
-	private static int totalAves = 0;
+	private static int totalAves = 2;
 	private String colorPlumas;
     public static int aguilas;
     public static int halcones;
