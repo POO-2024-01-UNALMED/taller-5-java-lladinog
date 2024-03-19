@@ -10,6 +10,7 @@ public class Pez extends Animal {
 
     public Pez() {
         super();
+        totalPeces++;
     }
 
     public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {

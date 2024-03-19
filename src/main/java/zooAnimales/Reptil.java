@@ -10,6 +10,7 @@ public class Reptil extends Animal {
 
     public Reptil() {
         super();
+        totalReptiles++;
     }
 
     public Reptil(String nombre, int edad, String habitat, String genero,String colorEscamas, int largoCola) {

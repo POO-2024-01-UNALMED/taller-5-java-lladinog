@@ -9,6 +9,7 @@ public class Anfibio extends Animal {
 
     public Anfibio() {
         super();
+        totalAnfibios++;
     }
 
     public Anfibio(String nombre, int edad, String habitat, String genero,String colorPiel, boolean venenoso) {
