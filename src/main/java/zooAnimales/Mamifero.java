@@ -1,5 +1,4 @@
 package zooAnimales;
-import gestion.Zona;
 
 public class Mamifero extends Animal {;
 	private static int totalMamiferos = 0;
@@ -13,7 +12,7 @@ public class Mamifero extends Animal {;
     }
 
     public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
-        super(nombre, edad, habitat, genero, getZona());
+        super(nombre, edad, habitat, genero);
         this.pelaje = pelaje;
         this.patas = patas;
         totalMamiferos++;

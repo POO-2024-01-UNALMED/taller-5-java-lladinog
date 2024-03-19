@@ -1,6 +1,5 @@
 package zooAnimales;
 
-import gestion.Zona;
 
 public class Pez extends Animal {
 	private static int totalPeces = 0;
@@ -13,21 +12,21 @@ public class Pez extends Animal {
         super();
     }
 
-    public Pez(String nombre, int edad, String habitat, String genero,Zona zona, String colorEscamas, int cantidadAletas) {
-        super(nombre, edad, habitat, genero, getZona());
+    public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+        super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
         totalPeces++;
         
     }
-    public static Pez crearBacalao(String nombre, int edad, String genero, Zona zona) {
+    public static Pez crearBacalao(String nombre, int edad, String genero) {
     	bacalaos++;
-        return new Pez(nombre, edad, "oceano", genero, zona,  "gris", 6);
+        return new Pez(nombre, edad, "oceano", genero,"gris", 6);
     }
 
-    public static Pez crearSalmon(String nombre, int edad, String genero, Zona zona) {
+    public static Pez crearSalmon(String nombre, int edad, String genero) {
     	salmones++;
-        return new Pez(nombre, edad, "oceano", genero, zona,  "rojo", 6);
+        return new Pez(nombre, edad, "oceano", genero,"rojo", 6);
     }
     public static int cantidadPeces() {
          return totalPeces;
