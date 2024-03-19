@@ -44,11 +44,11 @@ public class Animal {
         return "desplazarse";
     }
     public static String totalPorTipo() {
-        return "Mamiferos: #" + Mamifero.cantidadMamiferos() +
-                "\nAves: #" + Ave.cantidadAves() +
-                "\nReptiles: #" + Reptil.cantidadReptiles() +
-                "\nPeces: #" + Pez.cantidadPeces() +
-                "\nAnfibios: #" + Anfibio.cantidadAnfibios();
+        return "Mamiferos: " + Mamifero.caballos + "\n" +
+               "Aves: " + Ave.aguilas + "\n" +
+               "Reptiles: " + Reptil.iguanas + "\n" +
+               "Peces: " + Pez.bacalaos + "\n" +
+               "Anfibios: " + Anfibio.ranas;
     }
 
     @Override
